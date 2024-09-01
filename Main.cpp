@@ -5,10 +5,10 @@
 using namespace std;
 int main() {
   int m = 0, n = 0;
-  bool eye;
+  //bool eye;
   mojave moveto;
-  std::cerr << "To enable eye comfort mode press 1(system memory consumption increased)" << '\n';
-  cin >> eye;
+  //std::cerr << "To enable eye comfort mode press 1(system memory consumption increased)" << '\n';
+  //cin >> eye;
   for (int i = 0;i < 30;i++) {
     for (int j = 0;j < 120;j++) {
       cout << (char)marp[0][i][j];
@@ -71,12 +71,12 @@ int main() {
       break;
     }
     if (paste == 1) {
-      if (eye != 1) {
+      //if (eye != 1) {
         //system("cls");
         cout << "\x1b[H";
-        cout << k[0][0];
-      }
-      else { cout << '\n'; }
+        cout << k[0][0]<<endl;
+      //}
+      //else { cout << '\n'; }
       // cout<<'\r'<<endl<<k[0][0]<<'\r';
     }
   } while (moveto.door() != 1);
