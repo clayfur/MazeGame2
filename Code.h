@@ -33,10 +33,10 @@ int marp[][30][120]={
   186,219,255,255,255,255,219,219,219,219,219,219,219,219,178,255,255,255,024,178,178,219,219,219,219,178,178,178,178,255,255,255,178,219,219,219,178,219,219,219,219,178,178,178,178,219,219,219,219,219,219,219,219,219,219,219,219,219,219,219,219,219,219,219,219,219,219,219,219,219,219,219,219,219,219,219,219,219,219,219,219,219,219,219,219,219,219,219,219,219,219,219,219,219,219,219,219,219,219,219,219,219,219,219,219,219,219,219,206,206,219,219,219,219,219,219,219,219,219,186,
   200,205,205,205,205,205,205,205,205,205,205,205,205,205,205,205,205,205,205,205,205,205,205,205,205,205,205,205,205,205,205,205,205,205,205,205,205,205,205,205,205,205,205,205,205,205,205,205,205,205,205,205,205,205,205,205,205,205,205,205,205,205,205,205,205,205,205,205,205,205,205,205,205,205,205,205,205,205,205,205,205,205,205,205,205,205,205,205,205,205,205,205,205,205,205,205,205,205,205,205,205,205,205,205,205,205,205,205,205,205,205,205,205,205,205,205,205,205,205,188,
 };
-class mojave{
+class Controller{
   bool key[5]={0,0,0,0,0},keym[2]{0,0},lock1[2]={0,0},lock2[2]={0,0},hook=0;
 public:
-  mojave();
+  Controller();
   bool up();
   bool down();
   bool left();
@@ -48,7 +48,7 @@ public:
   void fix();
   void code();
 };
-mojave::mojave(){
+Controller::Controller(){
   for(int i = 0 ; i < 30 ; i++){
     for(int j = 0 ;j < 120 ; j++){
         k[0][i][j]=marp[0][i][j];
@@ -60,7 +60,7 @@ mojave::mojave(){
   y=1;
   yy=y;
 }
-void mojave::fix(){
+void Controller::fix(){
   for(int f = 0; f<30; f++){
     for(int j = 0; j<=120; j++){
       if(k[0][f][j]==(char)025){
@@ -73,7 +73,7 @@ void mojave::fix(){
     }
   }
 }
-void mojave::code() {
+void Controller::code() {
   std::string pass="grumm";
   std::string passk;
   std::cin >> passk;
@@ -92,7 +92,7 @@ void mojave::code() {
     std::cout << k[0][0] << '\n';
   }
 }
-void mojave::cannon(){
+void Controller::cannon(){
   if(xx==x && yy==y){
     if(k[0][y-1][x]==(char)182){
       yy=y-1;
@@ -156,7 +156,7 @@ void mojave::cannon(){
     else fix();
   }
 }
-void mojave::keys() {
+void Controller::keys() {
   if(y-1==10&&x==32){
     key[0]=1;//the one on the trident
     k[0][10][32]=(char)255;
@@ -203,7 +203,7 @@ void mojave::keys() {
       }
 }
 }
-void mojave::lock(){
+void Controller::lock(){
   if(k[0][y][x+1]==(char)233){
     std::cout << "lever found" << '\n';
     if (y==24&&x+1==34&&key[0]==1) {
@@ -280,7 +280,7 @@ void mojave::lock(){
     }
   }
 
-bool mojave::up(){
+bool Controller::up(){
   if(k[0][y-1][x]==(char)255 && (k[0][yy-1][xx]==(char)255||k[0][yy-1][xx]==(char)025)) {//&& ){
     k[0][y-1][x]=k[0][y][x];
     k[0][y][x]=(char)255;
@@ -306,7 +306,7 @@ bool mojave::up(){
   else return 0;
 }
 
-bool mojave::down(){
+bool Controller::down(){
   if(k[0][y+1][x]==(char)255 && (k[0][yy+1][xx]==(char)255||k[0][yy+1][xx]==(char)025)) {//&& ){
     k[0][y+1][x]=k[0][y][x];
     k[0][y][x]=(char)255;
@@ -332,7 +332,7 @@ bool mojave::down(){
   else return 0;
 }
 
-bool mojave::left(){
+bool Controller::left(){
   if(k[0][y][x-1]==(char)255 && (k[0][yy][xx-1]==(char)255||k[0][yy][xx-1]==(char)025)) { //&& {
     k[0][y][x-1]=k[0][y][x];
     k[0][y][x]=(char)255;
@@ -358,7 +358,7 @@ bool mojave::left(){
   else return 0;
 }
 
-bool mojave::right(){
+bool Controller::right(){
   if(k[0][y][x+1]==(char)255 && (k[0][yy][xx+1]==(char)255||k[0][yy][xx+1]==(char)025)){ //&& {
     k[0][y][x+1]=k[0][y][x];
     k[0][y][x]=(char)255;
@@ -385,7 +385,7 @@ bool mojave::right(){
 }
   else return 0;
 }
-bool mojave::door() {
+bool Controller::door() {
   if (((x==109||x==108)&& y==27)&&(keym[1]==1&&keym[0]==1)) {
     std::cout << "Congratulations on completing this game in " << kpress << " moves \n\a";
     return 1;

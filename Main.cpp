@@ -5,7 +5,7 @@
 using namespace std;
 int main() {
   int m = 0, n = 0;
-  mojave moveto;
+  Controller moveto;
   for (int i = 0;i < 30;i++) {
     for (int j = 0;j < 120;j++) {
       cout << (char)marp[0][i][j];
