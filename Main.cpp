@@ -1,7 +1,7 @@
 #include <iostream>
 #include <stdlib.h>
 #include <conio.h>
-#include "mapp00.h"
+#include "Code.h"
 using namespace std;
 int main() {
   int m = 0,n = 0;
