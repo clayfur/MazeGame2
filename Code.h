@@ -91,6 +91,9 @@ void Controller::code() {
     k[0][y][x]=(char)025;
     std::cout << k[0][0] << '\n';
   }
+  else if (passk == "exit"){
+    exit(0);
+  }
 }
 void Controller::cannon(){
   if(xx==x && yy==y){

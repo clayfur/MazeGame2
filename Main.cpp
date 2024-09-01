@@ -69,7 +69,7 @@ int main() {
     }
     if (paste == 1) {
       cout << "\x1b[H";
-      cout << k[0][0] << endl;
+      cout << k[0][0];
     }
   } while (moveto.door() != 1);
   std::cout << "Now press any key to exit" << '\n';

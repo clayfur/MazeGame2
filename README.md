@@ -12,6 +12,8 @@ Use either WASD or arrow keys to move the player around.
 
 Use Spacebar to interact with objects such as cannons and gate levers.
 
+To exit use `\` and type exit.
+
 ## Note
 
 Since this code was written for an older MinGW based C++ compiler it no longer functions as expected.
