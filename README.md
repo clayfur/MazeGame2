@@ -16,6 +16,6 @@ To exit use `\` and type exit.
 
 ## Note
 
-Since this code was written for an older MinGW based C++ compiler it no longer functions as expected.
+Since this code was written for an older MinGW based C++ compiler it no longer functions as originally created.
 
 If it works but odd characters appear try using older cmd like terminal with limited font capabiliies.
