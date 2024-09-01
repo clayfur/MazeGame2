@@ -4,7 +4,9 @@
 
 A simple project in C++ created during my early days of Computer Science many years ago.
 
-It is the second iteration of this idea and the files for the first have unfortunately been lost.
+It is the second iteration of this idea and the files for the first game created in C have unfortunately been lost.
+
+The map was designed using simple formatting tricks in MS excel and imported directly into the code and edited to fit array assignements.
 
 ## How to play?
 
