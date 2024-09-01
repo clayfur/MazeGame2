@@ -12,7 +12,7 @@ Use either WASD or arrow keys to move the player around.
 
 Use Spacebar to interact with objects such as cannons and gate levers.
 
-To exit use `\` and type exit.
+To exit use `/` and type exit.
 
 ## Note
 
