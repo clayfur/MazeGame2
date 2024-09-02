@@ -216,10 +216,12 @@ void Controller::lock(){
       if (lock1[1]==1) {
         for(int i =34; i<=34+42;i++){
           k[0][25][i]=(char)255;
-          system("cls");
+          //system("cls");
+          std::cout << "\x1b[H";
           std::cout << k[0][0];
         }
-        k[0][25][34+43]=(char)178;
+        k[0][25][34 + 43] = (char)178;
+        std::cout << "\x1b[H";
         std::cout << k[0][0];
       }
     }
@@ -230,15 +232,17 @@ void Controller::lock(){
       if (lock1[0]==1) {
         for(int i =34; i<=34+42;i++){
           k[0][25][i]=(char)255;
-          system("cls");
+          //system("cls");
+          std::cout << "\x1b[H";
           std::cout << k[0][0];
         }
       }
     }
     else if(x+1== 84 && y==17 && key[2]==1){
       k[0][17][84]=(char)232;
-      system("cls");
-      k[0][18][83]=(char)255;
+      //system("cls");
+      std::cout << "\x1b[H";
+      k[0][18][83] = (char)255;
       std::cout << k[0][0];
       std::cout << "drawbridge activated" << '\n';
     }
@@ -252,10 +256,12 @@ void Controller::lock(){
       if (lock2[1]==1) {
         for(int i =13;i >=7; i--){
           k[0][i][82] = (char)255;
-          system("cls");
+          //system("cls");
+          std::cout << "\x1b[H";
           std::cout << k[0][0];
         }
-        k[0][6][82]=(char)178;
+        k[0][6][82] = (char)178;
+        std::cout << "\x1b[H";
         std::cout << k[0][0];
       }
     }
@@ -266,18 +272,21 @@ void Controller::lock(){
       if (lock2[0]==1) {
         for(int i =13; i>=7;i--){
           k[0][i][82] = (char)255;
-          system("cls");
+          //system("cls");
+          std::cout << "\x1b[H";
           std::cout << k[0][0];
         }
-        k[0][6][82]=(char)178;
+        k[0][6][82] = (char)178;
+        std::cout << "\x1b[H";
         std::cout << k[0][0];
         }
       }
     }
     else if(x+1== 84 && y==17 && key[2]==1){
       k[0][17][84]=(char)232;
-      system("cls");
-      k[0][18][83]=(char)255;
+      //system("cls");
+      std::cout << "\x1b[H";
+      k[0][18][83] = (char)255;
       std::cout << k[0][0];
       std::cout << "drawbridge activated" << '\n';
     }
