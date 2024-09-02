@@ -1,6 +1,6 @@
 # Maze Game 2
 
-![Clip of Maze Game](Media/Maze%20Shot.jpg)
+![Clip of Maze Game](Media/Maze%20Clip.gif)
 
 ## About
 
