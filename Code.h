@@ -89,6 +89,7 @@ void Controller::code() {
     x=78;
     y=25;
     k[0][y][x]=(char)025;
+    std::cout << "\x1b[H";
     std::cout << k[0][0] << '\n';
   }
   else if (passk == "exit"){
@@ -117,41 +118,53 @@ void Controller::cannon(){
   else if (yy!=y || xx!=x) {
     std::cout << "cannon fired";
     if (k[0][yy-1][xx]==(char)240){
-      k[0][yy-1][xx]=(char)015;
+      k[0][yy - 1][xx] = (char)015;
+      std::cout << "\x1b[H";
       std::cout << k[0][0] << '\n';
       k[0][yy-1][xx]=(char)255;
+      std::cout << "\x1b[H";
       std::cout << k[0][0] << '\n';
       k[0][yy][xx]=(char)255;
+      std::cout << "\x1b[H";
       std::cout << k[0][0] << '\n';
       yy=y;
       xx=x;
     }
     else if (k[0][yy+1][xx]==(char)240) {
       k[0][yy+1][xx]=(char)015;
+      std::cout << "\x1b[H";
       std::cout << k[0][0] << '\n';
       k[0][yy+1][xx]=(char)255;
+      std::cout << "\x1b[H";
       std::cout << k[0][0] << '\n';
       k[0][yy][xx]=(char)255;
+      std::cout << "\x1b[H";
       std::cout << k[0][0] << '\n';
       yy=y;
       xx=x;
     }
     else if (k[0][yy][xx-1]==(char)240) {
       k[0][yy][xx-1]=(char)015;
+      std::cout << "\x1b[H";
       std::cout << k[0][0] << '\n';
       k[0][yy][xx-1]=(char)255;
+      std::cout << "\x1b[H";
       std::cout << k[0][0] << '\n';
       k[0][yy][xx]=(char)255;
+      std::cout << "\x1b[H";
       std::cout << k[0][0] << '\n';
       yy=y;
       xx=x;
     }
     else if (k[0][yy][xx+1]==(char)240) {
       k[0][yy][xx+1]=(char)015;
+      std::cout << "\x1b[H";
       std::cout << k[0][0] << '\n';
       k[0][yy][xx+1]=(char)255;
+      std::cout << "\x1b[H";
       std::cout << k[0][0] << '\n';
       k[0][yy][xx]=(char)255;
+      std::cout << "\x1b[H";
       std::cout << k[0][0] << '\n';
       yy=y;
       xx=x;

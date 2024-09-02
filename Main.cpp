@@ -35,7 +35,7 @@ int main() {
     kpress++;
     switch (mover) {
     case ' ':
-      cout << "space pressed";
+      //cout << "space pressed";
       moveto.cannon();
       moveto.lock();
       break;
