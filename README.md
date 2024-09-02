@@ -2,6 +2,8 @@
 
 ## About
 
+![Clip of Maze Game](Media/Maze%20Shot.jpg)
+
 A simple project in C++ created during my early days of Computer Science many years ago.
 
 It is the second iteration of this idea and the files for the first game created in C have unfortunately been lost.
